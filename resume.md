@@ -15,7 +15,7 @@ SEGi College Kuala Lumpur, Malaysia - GPA: 3.20
 High School Diploma at Ashgabat International School 			        (2008 - 2012)
 Ashgabat, Turkmenistan - GPA: 3.7
 
-## Relevant Work Experience:
+## Work Experience:
 Concierge at Fairfield Properties, New York (2021)
 
 Consular Assistant II at Consulate General of Pakistan, Texas (2017 - 2020)
@@ -42,8 +42,6 @@ President’s List (F 2019, S 2020, F 2020)
 Presidential Award for Educational Excellence (2010, 2011) 
 
 ## Conferences:
-<i>49th ANYSRGMC at Syracuse University (Planned) (2024)</i>
-
 17th BUGCATS at SUNY Binghamton (2023)
 
 48th ANYSRGMC at Syracuse University (2023)
