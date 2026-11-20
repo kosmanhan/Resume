@@ -1,58 +1,110 @@
-\documentclass{article}
+% Resume of Osman Khan. Build: pdflatex resume.tex (or upload to Overleaf).
+\documentclass[10pt,letterpaper]{article}
 
-\title{Osman Khan}
-\author{}
-\date{}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[top=0.5in,bottom=0.5in,left=0.62in,right=0.62in]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{navy}{HTML}{1F3864}
+\definecolor{linkblue}{HTML}{1155CC}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\titleformat{\section}{\color{navy}\bfseries\large\MakeUppercase}{}{0pt}{}[{\color{navy}\titlerule[0.8pt]}]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\setlist[itemize]{leftmargin=1.4em,topsep=1pt,itemsep=1pt,parsep=0pt,label=\textbullet}
+
+\newcommand{\role}[3]{\textbf{#1} -- #2\hfill\textbf{#3}\par\vspace{1pt}}
+\newcommand{\lead}[1]{\textbf{#1:}}
+\newcommand{\weblink}[2]{\href{#1}{\color{linkblue}\textbf{\underline{#2}}}}
 
 \begin{document}
-\maketitle
-\begin{flushleft}
-https://github.com/kosmanhan\hfill{929-326-2041}
-https://www.linkedin.com/in/kosmanhan\hfill{Valley Stream, NY}
-\section*{Education}
-Masters of Arts in Applied Mathematics\hfill{2023 - Present}\\
-\emph{CUNY Queens College, New York}\hfill{GPA: 4.0}\\exit exam: Graph \& Probability Theory\newline 
 
-Bachelor of Arts in Pure Mathematics\hfill{2021 - 2023}\\\emph{CUNY Queens College, New York}\hfill{GPA: 3.875}\\magna cum laude\newline
+\begin{center}
+  {\color{navy}\fontsize{20}{24}\selectfont\bfseries OSMAN KHAN}\\[3pt]
+  {\small\color{gray}\textbf{Valley Stream, NY \textbullet{} (929) 326-2041 \textbullet{}}
+  \weblink{mailto:kosmanhan@outlook.com}{kosmanhan@outlook.com} {\color{gray}\textbullet}
+  \weblink{https://linkedin.com/in/kosmanhan}{linkedin.com/in/kosmanhan} {\color{gray}\textbullet}
+  \weblink{https://mathemantique.com}{mathemantique.com}}
+\end{center}
+\vspace{-4pt}{\color{gray}\rule{\linewidth}{0.4pt}}\vspace{2pt}
 
-Associate of Arts in Liberal Arts\hfill{2019 - 2020}\\\emph{Lone Star College, University Park Campus, Texas}\hfill{GPA: 4.0}\\summa cum laude\newline
+Data scientist with an MA in Mathematics (4.0 GPA) who designed and ran the pricing, purchasing and reconciliation
+platform of a ticket resale company on Google Cloud. Builds pricing models, ML models and data pipelines in Python
+and SQL, and ships fast by directing AI coding agents: 170+ releases in under three months.
 
-Bachelor of Arts (Hons) in Business Management\hfill{2013 - 2015}\\\emph{University of Greenwich, SEGi College Kuala Lumpur, Malaysia}\hfill{GPA: 3.20}\newline
+\section{Work Experience}
 
-High School Diploma\hfill{2008 - 2012}\\\emph{Ashgabat International School, Turkmenistan}\hfill{GPA: 3.7}
-\section*{Work Experience}
+\role{Data Scientist}{Lostmoneyback/Pineapple Solutions, Woodmere, NY}{Jun 2025 -- Nov 2026}
+\begin{itemize}
+  \item \lead{Short-position book} From June 2026, ran hundreds of open short positions (e.g.\ 610 sales / 1,588
+        tickets on one day), covered by a buy/hold formula I designed (price trough, vendor cost, momentum,
+        supply/demand pressure, stop-loss), later extended to zone-level orders.
+  \item \lead{Machine learning} Built a price-crash classifier (XGBoost, 35,569 events; ROC AUC 0.81 vs a 0.58 base
+        rate, 94.6\% precision in the top decile), a back-test harness separating perfect-foresight from causal
+        P\&L, and CatBoost demand models; set the company's model-evaluation rules.
+  \item \lead{Parking data} Planned and owned matching for a parking-data pipeline joining marketplace events to lots
+        from six parking sites (117,698 matches, 93,284 exact), researched parking sales tax for 14,000+ lots in 46
+        states, and set walking-time pricing for the company's marketplace.
+  \item \lead{Data platform} Owned a $\sim$50-component Google Cloud platform (Cloud Run, Cloud SQL Postgres,
+        Scheduler, Secret Manager): POS mirroring, sale-email parsing, vendor price sync, market snapshots; 97
+        versioned database migrations with role-based access.
+  \item \lead{Vendor integrations} Integrated three B2B ticket vendor APIs for live pricing and one-click purchasing
+        under shared rate-limit budgets (3,802 events in one fill, zero rate-limit errors); sandbox-tested automated
+        buyback purchasing.
+  \item \lead{AI-agent delivery} Shipped 178 versions of the operations ledger with role-based views for six teams,
+        plus a partner ledger, by directing AI coding agents (Claude Code) under written runbooks and guardrails.
+  \item \lead{Automation \& analytics} Automated inventory sync to B2B platforms and catalog pipelines that let
+        overseas teams fulfill after sale on real-time availability; built executive dashboards for sales, margins
+        and KPIs.
+\end{itemize}
 
-Concierge at Fairfield Properties\hfill{2021}\\\emph{New York}\newline
+\vspace{3pt}
+\role{Data Scientist}{Empire Sports Group/Star Stadium Services, Woodmere, NY}{Jul 2024 -- Jun 2025}
+\begin{itemize}
+  \item \lead{Scaling} Automated event-catalog aggregation, replacing manual research and vastly expanding
+        targetable event volume across US and Canadian markets.
+  \item \lead{Business model launch} Enabled the ``Zone'' sell-before-purchase model by structuring overseas team
+        workflows and coordinating pricing-script implementation with outside consultants.
+  \item \lead{Leadership \& infrastructure} Recruited, trained, and managed remote overseas teams; supported backend
+        setup (domain/email health) and early API-driven marketplace integrations.
+\end{itemize}
 
-Consular Assistant II at Consulate General of Pakistan\hfill{2017-2020}
-\\\emph{Texas}\newline
+\vspace{3pt}
+\role{Owner \& Developer}{Independent Venture}{2025 -- Present}
+\begin{itemize}
+  \item \lead{Results} Bought and resold 3,000+ event parking passes across 53 venues, for \$125K+ in sales in 12
+        months.
+  \item \lead{Automation} Built a serverless system (TypeScript, SQL, Cloudflare) that turns 20K+ marketplace emails
+        into linked purchase and sale records.
+  \item \lead{Analytics} Built dashboards for inventory, P\&L, and taxes; reconciled 3,400+ card transactions,
+        matching 96\% of parking charges automatically.
+\end{itemize}
 
-Production Assistant/Team Lead at Glasses Group Global\hfill{2014-2015}\\\emph{Malaysia}\newline
+\section{Education}
 
-\section*{Skills}
-Python\\R\\SQL\\LaTex
+\textbf{Master of Arts in Mathematics}\hfill\textbf{2024}\\
+\emph{CUNY Queens College, New York}\\
+GPA: 4.00 $|$ Focus: Graph Theory \& Probability Theory
 
-\section*{Scholarships}
+\vspace{4pt}
+\textbf{Bachelor of Arts in Mathematics, magna cum laude}\hfill\textbf{2023}\\
+\emph{CUNY Queens College, New York}\\
+GPA: 3.88 $|$ Scholarships: Tashlik, Raymond Taylor, Brownstein/McDermott, Banesh Hoffman Memorial Award
 
-\$1,000 Tashlik Family Scholarship Endowment\hfill{F 2023}
+\section{Skills}
 
-\$2,000 Raymond Taylor QC Scholars Endowment Fund\hfill{S 2023}
+\lead{Languages \& Data} Python, SQL (PostgreSQL, DuckDB), TypeScript, JavaScript, FastAPI, Flask, Google Sheets\\[2pt]
+\lead{Data Science \& Analytics} Machine Learning (XGBoost, CatBoost), Back-testing \& Model Evaluation, Pricing
+Models, Time-Series, Statistics, Market Data (Ticketmetric, Seatdata)\\[2pt]
+\lead{Cloud \& Engineering} Google Cloud (Cloud Run, Cloud SQL, Scheduler, Build, Secret Manager, IAM),
+Cloudflare, REST APIs, Git, AI Agent Orchestration (Claude Code), Technical Documentation
 
-\$5,000 Donald I. Brownstein/John McDermott Scholarship \hfill{F 2022}
-
-\$1,000 UP-Pepsi Cola Endowment Scholarship\hfill{F 2020}
-
-\section*{Awards \& Honor Societies}
-Banesh Hoffman Memorial Award\hfill{2023}\\
-Dean’s List\hfill{S 2022, F 2022, S 2023}\\
-Phi Theta Kappa\hfill{2020}\\
-President’s List\hfill{F 2019, S 2020, F 2020}\\
-Presidential Award for Educational Excellence\hfill{2010, 2011}
-
-\section*{Conferences}
-17th BUGCATS at SUNY Binghamton\hfill{2023}\\
-48th ANYSRGMC at Syracuse University\hfill{2023}\\
-22nd SUMS at Brown University\hfill{2023}\\
-37th LIMAÇON at SUNY Old Westbury\hfill{2022}
-\end{flushleft}
 \end{document}
